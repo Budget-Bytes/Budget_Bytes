@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Budget Bytes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .content, .section {
+      display: none;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content.active, .section.active {
+      display: block;
+    }
+
+    .content h1 {
+      color: #333;
+    }
+
+    .content p {
+      color: #666;
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.content, .section').forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</head>
+<body onload="showSection('home')">
+
+  <div class="navbar">
+    <div>
+      <img src="logo.jpg" alt="Budget Bytes Logo" style="height: 3rem; vertical-align: middle;">
+      <span style="color: white; font-size: 1.5rem; margin-left: 1rem;">Budget Bytes</span>
+    </div>
+    <div>
+      <a href="javascript:void(0)" onclick="showSection('home')">Home</a>
+      <a href="javascript:void(0)" onclick="showSection('about-us')">About Us</a>
+      <a href="javascript:void(0)" onclick="showSection('contact-us')">Contact Us</a>
+      <a href="javascript:void(0)" onclick="showSection('terms')">Terms & Conditions</a>
+      <a href="javascript:void(0)" onclick="showSection('privacy')">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <div class="content" id="home">
+    <h1>Affordable & Delicious Recipes for Every Meal</h1>
+    <p>Cook Smart, Save Big</p>
+    <a href="#contact-us" style="color: #007bff; text-decoration: none; font-size: 1.2rem;">Get in Touch</a>
+
+    <h2>Healthy and Budget-Friendly, Just Like Home</h2>
+    <img src="meal.jpg" alt="Healthy Meal">
+    <p>Discover recipes that make eating well on a budget easy and enjoyable.</p>
+
+    <h2>Cooking Made Affordable and Fun</h2>
+    <p>Our simple recipes focus on saving time and money while creating meals everyone will love. From hearty breakfasts to quick dinners, Budget Bytes has you covered.</p>
+
+    <h3>The Benefits of Budget Cooking</h3>
+    <p>Cooking at home saves money and allows you to enjoy meals tailored to your tastes. With affordable ingredients, you can create satisfying dishes without overspending.</p>
+
+    <h3>Smart Tips for Budget Cooking</h3>
+    <p>Plan your meals, use pantry staples, and batch cook to save time and money. Check out our 30-minute recipes for delicious meals that won’t break the bank.</p>
+
+    <img src="meal_2.jpg" alt="Another Delicious Meal">
+    <img src="logo.jpg" alt="Third Delicious Meal">
+  </div>
+
+  <!-- About Us Section -->
+  <div class="section" id="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to Budget Bytes, your ultimate source for affordable recipes that don’t skimp on flavor. Our mission is to make delicious, wholesome meals accessible to everyone, no matter the budget.</p>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="section" id="contact-us">
+    <h2>Contact Us</h2>
+    <p>We’re here to help you cook smarter, not harder. Have questions or want to share your favorite budget-friendly recipes? Reach out to us!</p>
+    <p>Email: support@budgetbytes.com</p>
+    <p>Phone: +1 (800) 987-6543</p>
+    <p>Address: 456 Frugal Street, Savers Town, ST 67890</p>
+  </div>
+
+  <!-- Terms & Conditions Section -->
+  <div class="section" id="terms">
+    <h2>Terms & Conditions</h2>
+    <p>By using the Budget Bytes website, you agree to the following terms:</p>
+    <ul>
+      <li>All content is for informational purposes only.</li>
+      <li>Reproducing or sharing content without permission is prohibited.</li>
+      <li>We may update these terms at our discretion.</li>
+    </ul>
+  </div>
+
+  <!-- Privacy Policy Section -->
+  <div class="section" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>Your privacy is our priority. Here’s how we handle your data:</p>
+    <ul>
+      <li>We only collect necessary information with your consent.</li>
+      <li>Your data helps us improve our site and services.</li>
+      <li>We do not share personal information without your explicit approval.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>
+      <a href="javascript:void(0)" onclick="showSection('about-us')">About Us</a>
+      <a href="javascript:void(0)" onclick="showSection('privacy')">Privacy Policy</a>
+      <a href="javascript:void(0)" onclick="showSection('contact-us')">Contact Us</a>
+      <a href="javascript:void(0)" onclick="showSection('terms')">Terms & Conditions</a>
+    </p>
+    <p>&copy; 2024 Budget Bytes. All Rights Reserved</p>
+  </div>
+
+</body>
+</html>
